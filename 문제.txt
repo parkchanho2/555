@@ -2,7 +2,7 @@
 
 
 
-풀이 1.
+풀이 2.
 package if_;
 
 import java.util.Scanner;

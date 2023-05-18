@@ -1,6 +1,44 @@
-문제 정수를 입력받고 음수면 음수, 0이면 0, 양수면 양수로 출력하고 짝수 홀수 여부 출력
---------------------------------------------------------------------------------------------
+1.문제 정수를 입력받고 음수면 음수, 0이면 0, 양수면 양수로 출력하고 짝수 홀수 여부 출력
+2.점수를 입력 받고 80점 이상이면 합격 80점이하면 불합격 으로 나오게 만드세요.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+풀이 1.
 package if_;
 
 import java.util.Scanner;
@@ -19,3 +57,25 @@ public class Quiz01 {
 		if (num == 0) System.out.println("0");
 	}
 }
+
+
+풀이 2.
+package if_;
+
+import java.util.Scanner;
+
+public class Quiz01 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int score = 0;
+		
+		System.out.print("점수 입력: ");
+		score = sc.nextInt();
+		if(score >= 80) {
+			System.out.println("합격입니다");
+		}	
+		if (score <= 79 ) {
+			System.out.println("불합격입니다");
+		}
+	}
+}	
