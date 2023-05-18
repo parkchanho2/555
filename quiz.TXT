@@ -1,6 +1,6 @@
 1.문제 정수를 입력받고 음수면 음수, 0이면 0, 양수면 양수로 출력하고 짝수 홀수 여부 출력
 2.점수를 입력 받고 80점 이상이면 합격 80점이하면 불합격 으로 나오게 만드세요.
-
+3.A와 B를 비교하여 작은 값 출력
 
 
 
@@ -79,3 +79,38 @@ public class Quiz01 {
 		}
 	}
 }	
+
+
+
+풀이3.
+package if_;
+
+import java.util.Scanner;
+
+public class if_Exercise01 {
+	
+	public static void main(String[] args) {
+		
+		/*
+		 A와 B를 비교하여 작은 값 출력
+		 */
+		Scanner sc = new Scanner(System.in);
+		int A, B, min;
+		System.out.println("A와 B를 비교해 작은값 출력하시오");
+		System.out.print("A의 값 : ");
+		A = sc.nextInt();
+		System.out.print("B의 값 : ");
+		B = sc.nextInt();
+		
+		if(A>B) {
+			min = B;
+		}
+		else {
+			min = A;
+		}
+		
+		System.out.println("최소값은 " + min + "입니다.");
+		
+	}
+
+}
