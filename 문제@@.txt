@@ -1,0 +1,140 @@
+1번
+국어,수학,영어 점수를입력받아서 총점,평균,학점 구하기 (평균은 소수점 2번재 자리까지 나오게하기)
+90   => A                                   
+80   => B                                   
+70   => C                                    
+60이상 => D
+나머지는 F
+
+2번 
+두개의 숫자를 입력받아 각 숫자에 해당하는 아스키코드 알파벳을 나란히 출력하시오.
+(ex. 65 66을 입력받으면 "결과: AB"가 출력됨)
+
+- 처음 프로그램 실행시 시작하시겠습니까? 출력 후 대문자 Y를 입력받았을때만 진행
+- 아스키코드에서 알파벳의 범위는 65~122까지이므로 이 숫자일때만 입력받음
+- 첫번째 숫자와 두번째 숫자 각각 따로 입력받고, 한번이라도 잘못입력하면
+다음 입력을 받지않고 결과또한 미출력
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+문제 풀이 1번
+package if_;
+
+import java.util.Scanner;
+
+public class Quiz02 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int kor,mat,eng,total;
+		double avg;
+		
+		System.out.print("국어 점수 입력: ");
+		kor = sc.nextInt();
+		System.out.print("수학 점수 입력: ");
+		mat = sc.nextInt();
+		System.out.print("영어 점수 입력: ");
+		eng = sc.nextInt();
+		
+		total = kor + mat + eng;
+		avg = total/3.0;
+		System.out.println("총첨:" + total);
+		System.out.printf("평균: %.2f", avg);
+		System.out.println();
+		
+		if(avg >= 90) {
+			System.out.println("A등급");
+		}else if(avg >= 80) {
+			System.out.println("B등급");
+		}else if(avg >= 70) {
+			System.out.println("C등급");
+		}else if(avg >= 60) {
+			System.out.println("D등급");
+		}else {
+			System.out.println("F등급");
+		}
+		
+	}
+}
+
+
+풀이 2번
+import java.util.Scanner;
+
+public class Otherquiz {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String start;
+		
+		System.out.print("시작 하시겠습니까.?(Y/N): ");
+		int num1,num2;
+		start = input.next();
+		
+		if(start.equals("Y"))
+		{ //65~122 아스키
+			System.out.print("첫번째 65~122까지의 숫자를 입력하세요.: ");
+			num1 = input.nextInt();
+			if(num1 < 65 || num1 > 122) System.out.println("올바른 범위의 숫자를 입력하세요.");
+			else 	
+			{
+				System.out.print("두번째 65~122까지의 숫자를 입력하세요.: ");
+				num2 = input.nextInt();
+					if(num2 < 65 || num2 > 122) System.out.println("올바른 범위의 숫자를 입력하세요.");
+					else 
+					{
+						System.out.println("결과: " + (char)num1 + (char)num2);
+					}
+			}
+		}
+		else
+		{
+			System.out.println("종료");
+		}
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
