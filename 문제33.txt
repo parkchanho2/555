@@ -1,0 +1,128 @@
+Q.별찍기 문제 순서대로 만드시오
+ 1.*	     2. *****          3.   *
+   **            ****               **
+   ***            ***               ***
+   ****            **               ****
+   *****            *               *****
+ 				    ****
+				    ***
+				    **
+				    *
+
+2.문제. 숫자를 입력받고 그 숫자이하의 소수를 모두 구하고 총 개수를 출력
+ex) 10을 입력받으면 "2,3,5,7"과 "4개"로 출력
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------
+1번 풀이
+package for_;
+
+public class Quiz01 {
+	public static void main(String[] args) {
+		
+		/*
+		 *
+		 **
+		 ***
+		 ****
+		 *****
+		  for(int i =0; i<5;i++) {
+			for(int j =0; j < i + 1 ; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+		 
+		 *****
+		  ****
+		   ***
+		    **
+		     *
+		for(int i=0; i<5; i++) {
+			for(int j=0; j<i; j++) {
+				System.out.print(" ");
+			}
+			for(int j=0; j<5-i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+
+		*
+		*
+		**
+		***	
+		****
+		*****
+		****	
+		***
+		**
+		*
+
+		for(int i=0; i<5; i++) {
+			for(int j=0;j<i+1;j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		for(int i=0; i<4; i++) {
+			for(int j=0; j<4-i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+
+2번 풀이
+
+
+Scanner sc = new Scanner(System.in);
+		int maxNum=0;
+		int count=0;
+		int allCount=0;
+		
+		System.out.print("수 입력: ");
+		maxNum = sc.nextInt();
+		System.out.println("=====");
+		
+		for(int i=2; i<=maxNum;i++) 
+		{	//2~maxNum
+			for(int j=2;j<=i;j++)
+			{
+				if(i%j==0) count++; //나머지가0이 나오면 count증가
+			}
+			if(count==1) //나머지가0이 나온숫자의 갯수가 1개(본인)밖에 없다면 출력
+			{
+				allCount++;
+				System.out.print(i+ ", ");
+			}
+			count=0;
+		}
+		System.out.printf("\n=====\n총 %d개", allCount);
