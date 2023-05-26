@@ -1,0 +1,32 @@
+5명의 사람 이름을 입력 받아서 ArrayList에 저장한 후에 이들 중 '김'씨 성을 가진 사람을 모두 출력하시오.
++ 김씨 성을 가진 사람이 몇 명인지 출력하시오.
+
+
+
+
+
+
+
+
+
+
+        Scanner sc = new Scanner(System.in);
+        ArrayList<String> names = new ArrayList(); 
+        int index = 0; 
+
+        for(int i = 0 ; i <= 4 ; i++) { 
+            System.out.println("이름을 입력해 주세요");
+            names.add(sc.nextLine());
+        }
+
+        System.out.println("성이 '김'인 분의 이름을 모두 출력합니다.");
+
+        for(int i = 0 ; i <= 4 ; i++) {
+            String name = names.get(i); 
+            if (name.startsWith("김")) {
+                index++;
+                System.out.printf("[%s]\t",names.get(i)); 
+            }
+        }
+        System.out.println();
+        System.out.println("김씨 성을 가진 분은 모두 " + index + " 명 입니다.");
